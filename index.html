@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding for the webpage -->
+    <meta charset="UTF-8">
+
+    <!-- Make the webpage responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the title shown in the browser tab -->
+    <title>Image Slider Library</title>
+
+    <!-- Connect the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Main container holds the complete image slider -->
+    <main class="container">
+
+        <!-- Heading and subtitle of the project -->
+        <h1>Image Slider Library</h1>
+        <p class="subtitle">Explore our collection of images</p>
+
+        <!-- Slider container holds images and navigation controls -->
+        <div class="slider">
+
+            <!-- Container for all three slides -->
+            <div class="slides">
+
+                <!-- First image, displayed when the page loads -->
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1604428803896-c1e5151d4128?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                         alt="Beautiful mountain landscape">
+
+                    <!-- Caption displayed over the first image -->
+                    <div class="caption">Beautiful Mountains</div>
+                </div>
+
+                <!-- Second image, hidden until it is selected -->
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1594342436424-dda50df715d9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                         alt="Beautiful beach landscape">
+
+                    <!-- Caption displayed over the second image -->
+                    <div class="caption">Peaceful Beach</div>
+                </div>
+
+                <!-- Third image, hidden until it is selected -->
+                <div class="slide">
+                    <img src="https://plus.unsplash.com/premium_photo-1669830536955-e28bbde53a26?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                         alt="Beautiful green forest">
+
+                    <!-- Caption displayed over the third image -->
+                    <div class="caption">Green Forest</div>
+                </div>
+            </div>
+
+            <!-- Button to display the previous image -->
+            <button class="prev" id="prevBtn"
+                    aria-label="Previous image">&#10094;</button>
+
+            <!-- Button to display the next image -->
+            <button class="next" id="nextBtn"
+                    aria-label="Next image">&#10095;</button>
+
+            <!-- Dot navigation allows users to select an image directly -->
+            <div class="dots">
+
+                <!-- First dot is active because the first image is visible -->
+                <button class="dot active" data-index="0"
+                        aria-label="Show image 1"></button>
+
+                <!-- Second dot selects the second image -->
+                <button class="dot" data-index="1"
+                        aria-label="Show image 2"></button>
+
+                <!-- Third dot selects the third image -->
+                <button class="dot" data-index="2"
+                        aria-label="Show image 3"></button>
+            </div>
+        </div>
+
+        <!-- Display the current image number -->
+        <p class="counter" id="counter">Image 1 of 3</p>
+
+        <!-- Buttons for controlling the automatic slideshow -->
+        <div class="controls">
+
+            <!-- Pause or resume the automatic slideshow -->
+            <button id="playBtn">Pause Slideshow</button>
+
+            <!-- Return to the first image and restart the slideshow -->
+            <button id="restartBtn">Start from Beginning</button>
+
+        </div>
+    </main>
+
+    <!-- Connect the external JavaScript file for slider functionality -->
+    <script src="slider.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the webpage background and text */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #766d97;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* Center the main content */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Style the main heading */
+h1 {
+    font-size: 32px;
+    color: #3d2f6c;
+    margin-bottom: 10px;
+}
+
+/* Style the subtitle */
+.subtitle {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Main slider container */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #2a1442;
+    box-shadow: 0 8px 25px rgba(66, 13, 13, 0.15);
+}
+
+/* Position the slides inside the slider */
+.slides {
+    position: relative;
+    width: 100%;
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+    position: relative;
+}
+
+/* Display only the active slide */
+.slide.active {
+    display: block;
+}
+
+/* Set the size of each image */
+.slide img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* Display a caption over the image */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 15px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+
+    /* Add a dark gradient behind the caption */
+    background: linear-gradient(
+        transparent,
+        rgba(52, 7, 7, 0.8)
+    );
+}
+
+/* Style the previous and next buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    color: white;
+    background-color: rgba(15, 23, 42, 0.7);
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Position the previous button on the left */
+.prev {
+    left: 12px;
+}
+
+/* Position the next button on the right */
+.next {
+    right: 12px;
+}
+
+/* Change arrow button color when hovered */
+.prev:hover,
+.next:hover {
+    background-color: #707a8e;
+}
+
+/* Position the navigation dots */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 4;
+}
+
+/* Style each navigation dot */
+.dot {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    cursor: pointer;
+}
+
+/* Highlight the active dot */
+.dot.active {
+    background-color: #091f43;
+    transform: scale(1.2);
+}
+
+/* Style the image counter */
+.counter {
+    margin: 18px 0;
+    color: #151b22;
+    font-weight: bold;
+}
+
+/* Arrange the slideshow controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Style the slideshow control buttons */
+.controls button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1d4b68;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Add a hover effect to control buttons */
+.controls button:hover {
+    background-color: #355361;
+}
+
+/* Make the slider responsive on mobile devices */
+@media (max-width: 600px) {
+
+    /* Reduce the heading size */
+    h1 {
+        font-size: 25px;
+    }
+
+    /* Reduce the image height */
+    .slide img {
+        height: 280px;
+    }
+
+    /* Make captions smaller */
+    .caption {
+        font-size: 17px;
+        padding: 20px 10px;
+    }
+
+    /* Make navigation buttons smaller */
+    .prev,
+    .next {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Make control buttons fit smaller screens */
+    .controls button {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
